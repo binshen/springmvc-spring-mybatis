@@ -22,7 +22,8 @@ public class IndexController {
 
         List<Todo> todoList = todoService.selectTodoList();
         model.put("todoList", todoList);
+        model.put("site_name", "TODO List");
 
-        return "listTodo";
+        return "index";
     }
 }
