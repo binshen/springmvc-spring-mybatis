@@ -24,7 +24,7 @@
                             <c:when test="${todo.finished == 1}">
                                 <li>
                                     <del>${todo.title}</del>&nbsp;
-                                    <a href="/todo/${todo.id}/finish?status=yes">恢复</a>,
+                                    <a href="/todo/${todo.id}/finish/0">恢复</a>,
                                     <a href="/todo/${todo.id}/edit">修改</a>,
                                     <a href="/todo/${todo.id}/delete" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
                                 </li>
@@ -32,7 +32,7 @@
                             <c:otherwise>
                                 <li class="finished">
                                     ${todo.title}&nbsp;
-                                    <a href="/todo/${todo.id}/finish?status=no">完成</a>,
+                                    <a href="/todo/${todo.id}/finish/1">完成</a>,
                                     <a href="/todo/${todo.id}/edit">修改</a>,
                                     <a href="/todo/${todo.id}/delete" onclick="return confirm('删除以后不能恢复的，确定？')">删除</a>
                                 </li>

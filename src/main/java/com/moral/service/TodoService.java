@@ -21,4 +21,24 @@ public class TodoService {
     public List<Todo> selectTodoList() {
         return todoDao.selectTodoList();
     }
+
+    public Todo selectTodo(int id) {
+        return todoDao.selectTodo(id);
+    }
+
+    public int insertTodo(Todo todo) {
+        return todoDao.insertTodo(todo);
+    }
+
+    public int deleteTodo(int id) {
+        return todoDao.deleteTodo(id);
+    }
+
+    public int updateTitle(Todo todo) {
+        return todoDao.updateTitle(todo);
+    }
+
+    public int updateStatus(Todo todo) {
+        return todoDao.updateStatus(todo);
+    }
 }

@@ -17,4 +17,34 @@
         ]]>
     </select>
 
+    <select id="selectTodo" parameterType="int" resultType="com.moral.model.Todo">
+        <![CDATA[
+            SELECT * FROM todo WHERE id=#{id}
+        ]]>
+    </select>
+
+    <insert id="insertTodo" parameterType="com.moral.model.Todo" flushCache="true">
+        <![CDATA[
+            INSERT INTO todo (title, post_date, finished) VALUES (#{title}, #{post_date}, #{finished})
+        ]]>
+    </insert>
+
+    <insert id="updateTitle" parameterType="com.moral.model.Todo">
+        <![CDATA[
+            UPDATE todo SET title=#{title} WHERE id=#{id}
+        ]]>
+    </insert>
+
+    <insert id="updateStatus" parameterType="com.moral.model.Todo">
+        <![CDATA[
+            UPDATE todo SET finished=#{finished} WHERE id=#{id}
+        ]]>
+    </insert>
+
+    <delete id="deleteTodo" parameterType="int">
+        <![CDATA[
+            DELETE FROM todo WHERE id=#{id}
+        ]]>
+    </delete>
+
 </mapper>
